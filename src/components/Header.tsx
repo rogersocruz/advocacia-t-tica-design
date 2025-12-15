@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
+import logo from '@/assets/logo.svg';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -18,7 +19,7 @@ const Header = () => {
     { href: '#hero', label: 'Início' },
     { href: '#areas', label: 'Áreas de Atuação' },
     { href: '#about', label: 'Quem Sou' },
-    { href: '#publications', label: 'Publicações' },
+    { href: '#instagram', label: 'Publicações' },
     { href: '#contact', label: 'Contato' },
   ];
 
@@ -26,8 +27,8 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? 'glass-effect border-b border-border py-3'
-          : 'bg-transparent py-5'
+          ? 'glass-effect border-b border-border py-2'
+          : 'bg-transparent py-4'
       }`}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
@@ -41,12 +42,14 @@ const Header = () => {
         {/* Logo */}
         <div className="flex-1 lg:flex-none lg:absolute lg:left-1/2 lg:-translate-x-1/2">
           <a href="#hero" className="block">
-            <h1 className="font-display text-xl md:text-2xl font-medium tracking-wide text-foreground">
-              Letícia Tomich
-              <span className="block text-xs md:text-sm font-body font-normal tracking-[0.3em] text-muted-foreground uppercase">
-                Advocacia
-              </span>
-            </h1>
+            <img 
+              src={logo} 
+              alt="Letícia Tomich Advocacia" 
+              className={`transition-all duration-500 ${
+                isScrolled ? 'h-10 md:h-12' : 'h-12 md:h-14'
+              }`}
+              style={{ filter: 'brightness(0) saturate(100%)' }}
+            />
           </a>
         </div>
 

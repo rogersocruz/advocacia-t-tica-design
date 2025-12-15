@@ -1,3 +1,5 @@
+import logo from '@/assets/logo.svg';
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -7,12 +9,13 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo */}
           <div>
-            <h3 className="font-display text-lg font-medium text-background">
-              Letícia Tomich
-              <span className="text-xs font-body font-normal tracking-[0.2em] text-background/60 ml-2">
-                ADVOCACIA
-              </span>
-            </h3>
+            <a href="#hero">
+              <img 
+                src={logo} 
+                alt="Letícia Tomich Advocacia" 
+                className="h-10"
+              />
+            </a>
           </div>
 
           {/* Navigation */}
