@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import lawyerPhoto from '@/assets/lawyer-photo.png';
 
 const Hero = () => {
   return (
@@ -18,10 +19,10 @@ const Hero = () => {
           <div className="order-2 lg:order-1 space-y-8">
             <div className="space-y-4">
               <p
-                className="font-body text-sm md:text-base tracking-[0.4em] uppercase text-accent animate-fade-up"
+                className="font-body text-sm md:text-base tracking-[0.3em] uppercase text-accent animate-fade-up"
                 style={{ animationDelay: '0.1s' }}
               >
-                Estratégia Jurídica de Alta Performance
+                Advogada Especialista em Direito Empresarial, Civil, Consumidor e Família
               </p>
               <h2
                 className="font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium leading-[1.1] text-foreground animate-fade-up"
@@ -48,13 +49,22 @@ const Hero = () => {
                 Agendar Consultoria
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
-              <Button variant="outline" size="lg">
-                Conhecer Especialidades
+              <Button 
+                variant="outline" 
+                size="lg"
+                onClick={() => {
+                  const aboutSection = document.getElementById('about');
+                  if (aboutSection) {
+                    aboutSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
+                Saiba Mais
               </Button>
             </div>
           </div>
 
-          {/* Image Placeholder */}
+          {/* Lawyer Photo */}
           <div
             className="order-1 lg:order-2 relative animate-slide-in-right"
             style={{ animationDelay: '0.4s' }}
@@ -64,18 +74,12 @@ const Hero = () => {
               <div className="absolute -inset-4 bg-gradient-to-br from-secondary/40 to-accent/20 rounded-[2rem] transform rotate-3" />
               
               {/* Image container */}
-              <div className="relative aspect-[3/4] bg-gradient-to-br from-primary/10 to-secondary/30 rounded-[1.5rem] overflow-hidden shadow-elevated">
-                {/* Placeholder for lawyer image */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center space-y-4 p-8">
-                    <div className="w-24 h-24 mx-auto rounded-full bg-accent/20 flex items-center justify-center">
-                      <span className="font-display text-3xl text-accent">LT</span>
-                    </div>
-                    <p className="font-body text-sm text-muted-foreground">
-                      Imagem da Advogada
-                    </p>
-                  </div>
-                </div>
+              <div className="relative aspect-[3/4] rounded-[1.5rem] overflow-hidden shadow-elevated">
+                <img 
+                  src={lawyerPhoto} 
+                  alt="Letícia Tomich - Advogada especialista em Direito Empresarial, Civil, Consumidor e Família"
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
 
               {/* Decorative accent */}
