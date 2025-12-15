@@ -48,10 +48,10 @@ const ContactSection = () => {
                     Telefone
                   </p>
                   <a
-                    href="tel:+5511999999999"
+                    href="tel:+5531999999999"
                     className="font-body text-primary-foreground/70 hover:text-accent transition-colors"
                   >
-                    +55 (11) 99999-9999
+                    +55 (31) 99999-9999
                   </a>
                 </div>
               </div>
@@ -65,7 +65,9 @@ const ContactSection = () => {
                     Localização
                   </p>
                   <p className="font-body text-primary-foreground/70">
-                    São Paulo, SP - Brasil
+                    Rua Leopoldina, 161, Sala 01
+                    <br />
+                    Belo Horizonte/MG
                   </p>
                 </div>
               </div>

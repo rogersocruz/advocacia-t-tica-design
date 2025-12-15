@@ -1,4 +1,4 @@
-import { Scale, Building2, FileText, Shield, Users, Briefcase } from 'lucide-react';
+import { Scale, Building2, FileText, Users, Heart, ShoppingBag } from 'lucide-react';
 
 const areas = [
   {
@@ -9,9 +9,21 @@ const areas = [
   },
   {
     icon: Scale,
-    title: 'Contencioso Estratégico',
+    title: 'Direito Civil',
     description:
-      'Representação em litígios de alta complexidade com estratégias processuais personalizadas.',
+      'Atuação em questões patrimoniais, contratuais, responsabilidade civil e direitos da personalidade.',
+  },
+  {
+    icon: ShoppingBag,
+    title: 'Direito do Consumidor',
+    description:
+      'Defesa e orientação em relações de consumo, proteção de direitos e resolução de conflitos.',
+  },
+  {
+    icon: Heart,
+    title: 'Direito de Família',
+    description:
+      'Assessoria em divórcios, guarda, pensão alimentícia, inventários e planejamento sucessório.',
   },
   {
     icon: FileText,
@@ -20,22 +32,10 @@ const areas = [
       'Elaboração, revisão e negociação de contratos com foco em proteção e otimização de riscos.',
   },
   {
-    icon: Shield,
-    title: 'Compliance',
-    description:
-      'Implementação de programas de integridade e conformidade regulatória.',
-  },
-  {
     icon: Users,
-    title: 'Direito Trabalhista',
+    title: 'Contencioso Estratégico',
     description:
-      'Consultoria preventiva e contenciosa em relações trabalhistas empresariais.',
-  },
-  {
-    icon: Briefcase,
-    title: 'Consultoria Executiva',
-    description:
-      'Assessoria jurídica pessoal para C-Level e tomadores de decisão.',
+      'Representação em litígios de alta complexidade com estratégias processuais personalizadas.',
   },
 ];
 
@@ -59,21 +59,21 @@ const AreasSection = () => {
           {areas.map((area, index) => (
             <div
               key={area.title}
-              className="group relative bg-primary-foreground/5 border border-primary-foreground/10 rounded-lg p-8 hover:bg-primary-foreground/10 hover:border-accent/30 transition-all duration-500 hover-lift"
+              className="group relative bg-background/10 border border-background/20 rounded-lg p-8 hover:bg-background/15 hover:border-accent/50 transition-all duration-500 hover-lift"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Icon */}
               <div className="mb-6">
-                <div className="w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors duration-500">
+                <div className="w-14 h-14 rounded-full bg-accent/20 flex items-center justify-center group-hover:bg-accent/30 transition-colors duration-500">
                   <area.icon className="w-6 h-6 text-accent" />
                 </div>
               </div>
 
               {/* Content */}
-              <h3 className="font-display text-xl font-medium text-primary-foreground mb-3 group-hover:text-accent transition-colors duration-300">
+              <h3 className="font-display text-xl font-medium text-background mb-3 group-hover:text-accent transition-colors duration-300">
                 {area.title}
               </h3>
-              <p className="font-body text-primary-foreground/70 leading-relaxed">
+              <p className="font-body text-background/80 leading-relaxed">
                 {area.description}
               </p>
 
